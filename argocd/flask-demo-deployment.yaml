@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-demo
+  namespace: flask-demo
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: flask-demo
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: flask-demo
+    spec:
+      containers:
+      - image: 034557894042.dkr.ecr.us-west-2.amazonaws.com/flask-demo:0.1
+        name: flask-demo
+        ports:
+        - containerPort: 5000
