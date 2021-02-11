@@ -19,3 +19,10 @@ spec:
         name: flask-demo
         ports:
         - containerPort: 5000
+        readinessProbe:
+          httpGet:
+            scheme: HTTPS
+            path: /health
+            port: 5000
+          initialDelaySeconds: 10
+          periodSeconds: 5
