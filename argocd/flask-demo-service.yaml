@@ -5,7 +5,7 @@ metadata:
   name: service-flask-demo
 spec:
   ports:
-    - port: 80
+    - port: 5000
       targetPort: 5000
       protocol: TCP
   type: NodePort
