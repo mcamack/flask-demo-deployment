@@ -4,7 +4,7 @@ metadata:
   name: flask-demo
   namespace: flask-demo
 spec:
-  replicas: 1
+  replicas: 5
   revisionHistoryLimit: 3
   selector:
     matchLabels:
